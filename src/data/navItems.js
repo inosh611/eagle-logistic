@@ -21,8 +21,8 @@ export const navItems = [
     label: "Services",
     href: "/services",
     dropdown: [
-      { label: "Freight Forwarding", href: "/services/freight-forwarding" },
-      { label: "Logistics BPO", href: "/services/logistics-bpo" },
+      { label: "International Trade", href: "/services/freight-forwarding" },
+      { label: "Logistics Business Process Outsourcing", href: "/services/logistics-bpo" },
       { label: "Customs & Consultancy", href: "/services/customs-consultancy" },
       {
         label: "Specialized Logistics",

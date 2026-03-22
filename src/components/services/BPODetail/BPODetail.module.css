@@ -1,7 +1,7 @@
-/* Intro */
+/* ── Intro ── */
 .intro {
   background: var(--bg-light);
-  padding: 80px 80px 60px;
+  padding: 80px 10% 80px 10%;
 }
 
 .introInner {
@@ -35,10 +35,10 @@
   padding-top: 32px;
 }
 
-/* Benefits */
+/* ── Benefits ── */
 .benefits {
   background: #fff;
-  padding: 80px 80px;
+  padding: 80px 10% 80px 10%;
 }
 
 .benefitsHeader {
@@ -64,12 +64,27 @@
   border-radius: 16px;
   padding: 28px 24px;
   border: 1px solid rgba(13,27,62,0.06);
-  transition: transform 0.25s, box-shadow 0.25s;
+  transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.25s;
+  position: relative;
+  overflow: hidden;
 }
+
+.benefitCard::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
 .benefitCard:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 32px rgba(13,27,62,0.1);
 }
+.benefitCard:hover::before { transform: scaleX(1); }
 
 .benefitNum {
   font-family: 'Barlow Condensed', sans-serif;
@@ -94,15 +109,16 @@
   color: var(--text-muted);
 }
 
-/* Process */
-.process {
-  background: var(--navy-mid);
-  padding: 80px 80px;
+/* ── Process Section ── */
+.processSection {
+  background: var(--navy-dark);
+  padding: 90px 80px 100px;
+  overflow: hidden;
 }
 
 .processHeader {
   text-align: center;
-  margin-bottom: 56px;
+  margin-bottom: 72px;
 }
 
 .labelLight {
@@ -116,72 +132,428 @@
 
 .processTitle {
   font-family: 'Barlow', sans-serif;
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
   font-weight: 900;
   color: #fff;
+  margin-bottom: 14px;
 }
 
-.processSteps {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+.processSub {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.5);
+  max-width: 440px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── Snake layout ── */
+.snake {
   position: relative;
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
-.processStep {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 16px;
-  padding: 32px 24px;
-  position: relative;
-}
-
-.processStepNum {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 3rem;
-  font-weight: 900;
-  color: rgba(255,255,255,0.1);
-  line-height: 1;
-  margin-bottom: 16px;
-}
-
-.processConnector {
+/* SVG dashed path */
+.snakePath {
   position: absolute;
-  top: 44px;
-  right: -12px;
-  width: 24px;
-  height: 2px;
-  background: rgba(255,255,255,0.15);
-  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
 }
-.processStep:last-child .processConnector { display: none; }
 
-.processStepTitle {
+/* ── Each step row ── */
+.snakeStep {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.snakeRight { align-items: flex-end; }
+.snakeLeft  { align-items: flex-start; }
+
+/* ── Card ── */
+.snakeCard {
+  position: relative;
+  background: rgba(255,255,255,0.06);
+  border: 1.5px solid rgba(255,255,255,0.1);
+  border-radius: 50px;
+  width: 72%;
+  transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1),
+              background 0.3s,
+              border-color 0.3s,
+              box-shadow 0.3s;
+}
+
+.snakeCard:hover {
+  transform: scale(1.03);
+  background: rgba(255,255,255,0.1);
+  border-color: var(--step-color);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+/* Left border glow on hover */
+.snakeCard::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 50px;
+  background: linear-gradient(
+    135deg,
+    var(--step-color) 0%,
+    transparent 50%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+}
+.snakeCard:hover::before { opacity: 0.2; }
+
+.snakeCardInner {
+  padding: 24px 80px 24px 32px;
+}
+
+.snakeRight .snakeCardInner {
+  padding: 24px 32px 24px 80px;
+}
+
+/* Title */
+.snakeTitle {
   font-family: 'Barlow', sans-serif;
   font-size: 1.05rem;
   font-weight: 800;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
-.processStepDesc {
+/* Description */
+.snakeDesc {
   font-size: 0.83rem;
   line-height: 1.65;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.6);
 }
 
+/* ── Number circle ── */
+.snakeNum {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  z-index: 2;
+}
+
+.snakeCard:hover .snakeNum {
+  transform: translateY(-50%) scale(1.15);
+}
+
+/* Right card — number on left edge */
+.snakeNumLeft {
+  left: -28px;
+}
+
+/* Left card (reversed) — number on right edge */
+.snakeNumRight {
+  right: -28px;
+}
+
+/* ── Dot on path ── */
+.snakeDot {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2.5px solid;
+  background: var(--navy-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.snakeDotInner {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+/* Right cards — dot on far right */
+.snakeDotRight { right: -60px; }
+
+/* Left cards — dot on far left */
+.snakeDotLeft  { left: -60px; }
+
+/* ── Connector between steps ── */
+.snakeConnector {
+  display: flex;
+  margin: 4px 0;
+  opacity: 0.7;
+}
+
+.snakeRight .snakeConnector {
+  justify-content: flex-end;
+  padding-right: 24px;
+}
+
+.snakeLeft .snakeConnector {
+  justify-content: flex-start;
+  padding-left: 24px;
+}
+
+/* ── Responsive ── */
 @media (max-width: 768px) {
   .intro { padding: 60px 24px 40px; }
   .introInner { grid-template-columns: 1fr; gap: 24px; }
   .introDesc { padding-top: 0; }
+
   .benefits { padding: 60px 24px; }
   .benefitsGrid { grid-template-columns: 1fr 1fr; }
-  .process { padding: 60px 24px; }
-  .processSteps { grid-template-columns: 1fr 1fr; }
-  .processConnector { display: none; }
+
+  .processSection { padding: 60px 24px 70px; }
+
+  /* On mobile — all cards full width, left aligned */
+  .snakeRight,
+  .snakeLeft {
+    align-items: center;
+  }
+
+  .snakeCard { width: 90%; border-radius: 20px; }
+
+  .snakeCardInner,
+  .snakeRight .snakeCardInner {
+    padding: 20px 24px 20px 72px;
+  }
+
+  /* Number always on left on mobile */
+  .snakeNumLeft,
+  .snakeNumRight {
+    left: -24px;
+    right: auto;
+    width: 48px;
+    height: 48px;
+    font-size: 1rem;
+  }
+
+  /* Hide path dots on mobile */
+  .snakeDot,
+  .snakeConnector { display: none; }
+
+  .snakePath { display: none; }
+}
+/* ── Logistics isn't easy section ── */
+.notEasy {
+  background: var(--bg-light);
+  padding: 90px 10%;
+}
+
+.notEasyInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Text */
+.notEasyTitle {
+  font-family: 'Barlow', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 900;
+  color: var(--navy-mid);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.notEasyAccent {
+  color: var(--accent);
+}
+
+.notEasyDesc {
+  font-size: 0.92rem;
+  line-height: 1.85;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+/* Key points */
+.keyPoints {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 24px 0 32px;
+}
+
+.keyPoint {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--navy-mid);
+}
+
+.keyPointIcon {
+  width: 22px;
+  height: 22px;
+  background: var(--accent);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* CTA button */
+.notEasyBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--accent-dark);
+  border-radius: 50px;
+  padding: 13px 18px 13px 24px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  width: fit-content;
+}
+.notEasyBtn:hover { background: var(--accent); transform: translateY(-2px); }
+
+.notEasyBtnCircle {
+  width: 30px;
+  height: 30px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── 3x3 Mosaic grid ── */
+.mosaicWrap {
+  position: relative;
+}
+
+.mosaic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 6px;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 480px;
+}
+
+.mosaicCell {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.mosaicCell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.mosaicCell:hover img {
+  transform: scale(1.08);
+}
+
+/* Overlay on each cell */
+.mosaicOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(13, 27, 62, 0.2) 0%,
+    transparent 60%
+  );
+  transition: background 0.3s;
+}
+
+.mosaicCell:hover .mosaicOverlay {
+  background: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.2) 0%,
+    transparent 60%
+  );
+}
+
+/* Center cell — slightly larger visual weight */
+.mosaicCellCenter img {
+  filter: brightness(1.05) saturate(1.1);
+}
+
+/* Floating badge */
+.mosaicBadge {
+  position: absolute;
+  bottom: -18px;
+  left: -18px;
+  background: var(--accent-dark);
+  border-radius: 16px;
+  padding: 18px 22px;
+  box-shadow: 0 12px 40px rgba(29, 63, 170, 0.4);
+  text-align: center;
+  border: 3px solid #fff;
+}
+
+.mosaicBadgeValue {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.mosaicBadgeLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .notEasyInner { gap: 48px; }
+  .mosaic { height: 380px; }
+}
+
+@media (max-width: 768px) {
+  .notEasy { padding: 60px 24px; }
+  .notEasyInner { grid-template-columns: 1fr; gap: 40px; }
+  .mosaic { height: 300px; }
+  .mosaicBadge { bottom: -14px; left: -14px; padding: 14px 16px; }
+  .mosaicBadgeValue { font-size: 1.8rem; }
+  .keyPoints { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .mosaic { height: 240px; gap: 4px; }
 }
 
 @media (max-width: 480px) {
   .benefitsGrid { grid-template-columns: 1fr; }
-  .processSteps { grid-template-columns: 1fr; }
+  .snakeCard { width: 95%; }
 }

@@ -49,16 +49,16 @@ export const servicesList = [
 
 export const freightData = {
   hero: {
-    tag: 'Freight Forwarding',
+    tag: 'International Trade',
     title: 'Global Freight Solutions\nBuilt for Sri Lanka',
     subtitle: 'Whether you ship a single pallet or a full container, we manage every mile with precision and care.',
     image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1600&q=80',
   },
   intro: {
     title: 'Ocean & Air Freight — LCL and FCL',
-    description: `Eagle Logistic offers a full range of freight forwarding services, connecting
+    description: `Eagle Logistic offers a full range of International Trade services, connecting
     Sri Lankan businesses to global markets. Our expert team handles everything from booking
-    and documentation to customs clearance and final delivery — ensuring your cargo arrives
+    and documentation to customs clearance and final delivery - ensuring your cargo arrives
     safely, on time, and in full compliance with all regulations.`,
   },
   services: [
@@ -96,25 +96,25 @@ export const freightData = {
 
 export const bpoData = {
   hero: {
-    tag: 'Logistics BPO',
+    tag: 'Logistics Business Process Outsourcing',
     title: 'Cut Costs by 45%.\nNever Compromise Compliance.',
     subtitle: 'Outsource your logistics back-office to Eagle Logistic and let us run the operations while you focus on growth.',
     image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80',
   },
   intro: {
-    title: 'What is Logistics BPO?',
+    title: 'What is Logistics Business Process Outsourcing?',
     description: `Logistics Business Process Outsourcing (BPO) means handing your
-    back-office logistics operations — data entry, shipment tracking, invoice processing,
-    compliance reporting — to a specialist team. Eagle Logistic's BPO division has helped
+    back-office logistics operations - data entry, shipment tracking, invoice processing,
+    compliance reporting - to a specialist team. Eagle Logistic's BPO division has helped
     clients reduce operational costs by up to 45% while maintaining 100% regulatory compliance.`,
   },
   benefits: [
-    { id: 1, title: '45% Cost Reduction',    desc: 'Dramatically lower your operational overhead by outsourcing to our expert team.' },
-    { id: 2, title: '100% Compliance',        desc: 'Never miss a regulation. Our specialists stay ahead of every customs and trade rule.' },
-    { id: 3, title: 'Scalable Operations',    desc: 'Scale your logistics back-office up or down instantly without hiring or firing.' },
-    { id: 4, title: 'Real-Time Reporting',    desc: 'Live dashboards and reports so you always know exactly what is happening.' },
-    { id: 5, title: 'Dedicated Team',         desc: 'A named team assigned to your account — not a faceless call centre.' },
-    { id: 6, title: 'Technology Integration', desc: 'We integrate with your existing ERP, TMS and WMS systems seamlessly.' },
+    { id: 1, title: 'Scale Up Faster',    desc: 'Scale your business with an experienced team that can raise productivity, speed up the supply chain, and deliver accurate work across a range of complex but repetitive logistics processes.' },
+    { id: 2, title: 'Expert Professionals',        desc: '15+ years of experience in handling different aspects of International Trade Management ensures that we are well-versed with a range of logistics tasks and can ensure speed and efficiency of processes.' },
+    { id: 3, title: 'Guaranteed Compliance',    desc: 'In-depth industry knowledge and experience ensures that all your documentation is 100% compliant. Hence, there is reduced risks of errors, delays, and penalties.' },
+    { id: 4, title: 'Increased Savings',    desc: 'Drive up to 45% Cost reduction with efficient and compliant logistics processes, as well as cost savings on hiring and training staff for high quality logistics processes.' },
+    { id: 5, title: 'Personalized Services',         desc: 'Dedicated teams that understand your business requirements in and out, to be able to leverage optimal cost-saving opportunities while ensuring on-budget and on-time deliveries.' },
+    { id: 6, title: 'Confidential and Secure', desc: 'Your data is secure in our data center. With a written agreement backed by our professional indemnity insurance, your business is in safe hands.' },
   ],
   process: [
     { step: '01', title: 'Assessment',   desc: 'We audit your current back-office processes and identify cost and compliance gaps.' },
