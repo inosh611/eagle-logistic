@@ -1,0 +1,259 @@
+/* ── Section ── */
+.section {
+  background: #fff;
+  padding: 90px 80px;
+}
+
+/* ── Header ── */
+.header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.title {
+  font-family: 'Barlow', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 900;
+  color: var(--navy-mid);
+  margin-bottom: 14px;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── Top row — Vision + Mission ── */
+.topRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+/* ── Vision / Mission card ── */
+.vmCard {
+  border-radius: 20px;
+  border: 1.5px solid rgba(13, 27, 62, 0.07);
+  overflow: hidden;
+  position: relative;
+  background: var(--bg-light);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s,
+              border-color 0.3s;
+  cursor: default;
+}
+
+.vmCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 48px rgba(13, 27, 62, 0.1);
+  border-color: var(--vmcolor);
+}
+
+.cardInner {
+  padding: 36px 36px 40px;
+  position: relative;
+}
+
+/* Icon */
+.iconWrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+.vmCard:hover .iconWrap { transform: scale(1.08) rotate(-4deg); }
+
+/* Label */
+.cardLabel {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Card title */
+.cardTitle {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--navy-mid);
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+
+/* Statement */
+.cardStatement {
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+/* Decorative bottom bar */
+.cardDeco {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 4px;
+  border-radius: 0 0 0 0;
+  transform: scaleX(0);
+  transition: transform 0.35s ease;
+  transform-origin: left;
+}
+.vmCard:hover .cardDeco { transform: scaleX(1); }
+
+/* ── Quality Policy card ── */
+.qualityCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: var(--navy-mid);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Left side */
+.qualityLeft {
+  padding: 48px 48px;
+  position: relative;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.qualityLeft .iconWrap {
+  margin-bottom: 20px;
+}
+
+.qualityLeft .cardLabel {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.qualityTitle {
+  font-family: 'Barlow', sans-serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.qualityStatement {
+  font-size: 0.9rem;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.qualityBar {
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px;
+  height: 100%;
+}
+
+/* Right side */
+.qualityRight {
+  padding: 48px 48px;
+}
+
+.pointsTitle {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.point {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background 0.2s;
+}
+.point:last-child { border-bottom: none; }
+.point:hover { background: rgba(255, 255, 255, 0.02); }
+
+.pointNum {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  min-width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1.5px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  letter-spacing: 0.5px;
+}
+
+.pointText {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.65);
+  padding-top: 8px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .section { padding: 70px 40px; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 60px 20px; }
+
+  .topRow {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .qualityCard {
+    grid-template-columns: 1fr;
+  }
+
+  .qualityLeft {
+    padding: 36px 28px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .qualityRight { padding: 32px 28px 40px; }
+
+  .cardInner { padding: 28px 24px 32px; }
+}
+
+@media (max-width: 480px) {
+  .cardTitle { font-size: 1.3rem; }
+  .qualityTitle { font-size: 1.4rem; }
+  .pointNum { min-width: 30px; height: 30px; font-size: 0.85rem; }
+}

@@ -1,3 +1,20 @@
+
+import asanga from '../assets/team/asanga-weerackody.png';
+import janaka from '../assets/team/janaka-udumulla.png';
+import roshan from '../assets/team/roshan-silva.png';
+import tamara from '../assets/team/tamara-weerackody.png';
+import rangana from '../assets/team/rangana-perera.png';
+import nuwan from '../assets/team/nuwan-wickramanayaka.png';
+import amila from '../assets/team/amila-munaweera.png';
+import prabudda from '../assets/team/prabudda-ranaweera.png';
+import chandi from '../assets/team/chandi.png';
+import dinuka from '../assets/team/dinuka.png';
+import malinda from '../assets/team/malinda.png';
+import nadeera from '../assets/team/nadeera.png';
+import senali from '../assets/team/senali.png';
+import sewwandi from '../assets/team/sewwandi.png';
+import indika from '../assets/team/indika.png';
+
 export const companyOverview = {
   founded: "2005",
   tagline: "Moving the World. Powering Sri Lanka's Trade.",
@@ -125,75 +142,141 @@ export const leadershipTeam = {
       id: 1,
       name: "Asanga Weerackody",
       role: "Managing Director",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+      image:asanga,
       linkedin: "#",
     },
     {
       id: 2,
-      name: "Director Name",
-      role: "Director — Operations",
-      image:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80",
+      name: "Janaka Udumulla",
+      role: "Director – Finance",
+      image:janaka,
       linkedin: "#",
     },
     {
       id: 3,
-      name: "Director Name",
-      role: "Director — Finance",
-      image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+      name: "Roshan Silva",
+      role: "Director",
+      image:roshan,
+      linkedin: "#",
+    },
+    {
+      id: 4,
+      name: "Tamara Weerackody",
+      role: "Director",
+      image:tamara,
       linkedin: "#",
     },
   ],
   seniorManagement: [
     {
-      id: 4,
-      name: "Senior Manager Name",
-      role: "Head of Freight Forwarding",
-      image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80",
-      linkedin: "#",
-    },
-    {
       id: 5,
-      name: "Senior Manager Name",
-      role: "Head of Logistics BPO",
-      image:
-        "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&q=80",
+      name: "Rangana Perera",
+      role: "Head of Freight",
+      image:rangana,
       linkedin: "#",
     },
     {
       id: 6,
-      name: "Sayuri Pramudika",
-      role: "Head of Human Resources",
-      image:
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80",
+      name: "Nuwan Wickramanayaka",
+      role: "Head of Eagle Ground Transport",
+      image:nuwan,
       linkedin: "#",
     },
     {
       id: 7,
-      name: "Senior Manager Name",
-      role: "Head of Customs & Consultancy",
-      image:
-        "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=400&q=80",
+      name: "Amila Munaweera",
+      role: "Head of Finance",
+      image:amila,
       linkedin: "#",
     },
+    
+  ],
+  management: [
     {
       id: 8,
-      name: "Malinda",
-      role: "Head of Business Development",
-      image:
-        "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=400&q=80",
+      name: "Prabudda Ranaweera",
+      role: "Senior Manager – Marketing",
+      image:prabudda,
       linkedin: "#",
     },
     {
       id: 9,
-      name: "Sewwandi",
-      role: "Senior Manager — Client Relations",
-      image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+      name: "Nadeera Vithanage",
+      role: "Manager – Strategic Account Management",
+      image:nadeera,
       linkedin: "#",
     },
+    {
+      id: 10,
+      name: "Chandi Nadeeshani",
+      role: " Manager – Marketing",
+      image:chandi,
+      linkedin: "#",
+    },
+    {
+      id: 11,
+      name: "Dinuka Cooray",
+      role: "Asst. Manager – Marketing",
+      image:dinuka,
+      linkedin: "#",
+    },
+    {
+      id: 12,
+      name: "Sewwandi Hapuarachchi",
+      role: "Asst. Manager – Marketing",
+      image:sewwandi,
+      linkedin: "#",
+    },
+    {
+      id: 13,
+      name: "Malinda Susith",
+      role: "Asst. Manager – Marketing",
+      image:malinda,
+      linkedin: "#",
+    },
+     {
+      id: 14,
+      name: "Senali Dilinika",
+      role: "Head of Human Resources",
+      image:senali,
+      linkedin: "#",
+    },
+    {
+      id: 15,
+      name: "Indika Somarathne",
+      role: "Assistant Accountant",
+      image:indika,
+      linkedin: "#",
+    },
+    
   ],
 };
+
+export const companyValues = {
+  vision: {
+    title: 'Vision',
+    icon: 'vision',
+    color: '#2563eb',
+    statement: 'Transforming Sri Lanka\'s logistics with innovation and commitment to think differently.',
+  },
+  mission: {
+    title: 'Mission',
+    icon: 'mission',
+    color: '#0f6e56',
+    statement: 'Our mission is to revolutionize logistics in Sri Lanka and beyond by fostering a culture where every employee thrives, every customer is delighted and all stakeholders feel fulfilled & valued.',
+  },
+  quality: {
+    title: 'Quality Policy',
+    icon: 'quality',
+    color: '#854f0b',
+    statement: 'At Eagle Logistics Colombo, we pledge to uphold our commitment to continuous improvement of our quality management systems, innovation, and the embracing of new ideas to enhance our logistics solutions.',
+    points: [
+      'Adhere to legal, regulatory and all applicable requirements',
+      'Foster a culture that encourages thinking differently',
+      'Empower every employee to contribute creatively',
+      'Ensure delighted customers through efficient and reliable services',
+      'Prioritize the well-being and satisfaction of our employees',
+      'Value our stakeholders and fulfill their needs and expectations',
+    ],
+  },
+}

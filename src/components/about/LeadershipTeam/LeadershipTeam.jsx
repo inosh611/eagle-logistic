@@ -45,8 +45,18 @@ function LeadershipTeam() {
       <div className={styles.groupLabel} style={{ marginTop: 56 }}>
         Senior Management
       </div>
-      <div className={styles.managementGrid}>
+      <div className={styles.seniorManagementGrid}>
         {leadershipTeam.seniorManagement.map(person => (
+          <PersonCard key={person.id} person={person} />
+        ))}
+      </div>
+
+      {/* S Management */}
+      <div className={styles.groupLabel} style={{ marginTop: 56 }}>
+        Management
+      </div>
+      <div className={styles.managementGrid}>
+        {leadershipTeam.management.map(person => (
           <PersonCard key={person.id} person={person} />
         ))}
       </div>
