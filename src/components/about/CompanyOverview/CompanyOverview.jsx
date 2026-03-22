@@ -1,5 +1,7 @@
-import { companyOverview } from '../../../data/about'
-import styles from './CompanyOverview.module.css'
+import { companyOverview } from '../../../data/about';
+import styles from './CompanyOverview.module.css';
+import aboutMainImg from '../../../assets/about/about-main.jpg';
+
 
 function CompanyOverview() {
   return (
@@ -13,7 +15,8 @@ function CompanyOverview() {
             From a Single Vision to<br />
             <span className={styles.highlight}>Sri Lanka's Leading Logistics Partner</span>
           </h2>
-          <p className={styles.desc}>{companyOverview.description}</p>
+          <p className={styles.desc}>{companyOverview.description1}</p>
+          <p className={styles.desc}>{companyOverview.description2}</p>
           <a href="#timeline" className={styles.btn}>
             Our Journey
             <span className={styles.btnCircle}>
@@ -30,8 +33,9 @@ function CompanyOverview() {
         <div className={styles.right}>
           <div className={styles.imgWrap}>
             <img
-              src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80"
+              src={aboutMainImg}
               alt="Eagle Logistic Operations"
+              loading='lazy'
             />
             <div className={styles.foundedBadge}>
               <div className={styles.foundedYear}>{companyOverview.founded}</div>
