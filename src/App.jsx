@@ -16,6 +16,7 @@ import ContactPage from './pages/ContactPage';
 import PrimePage from './pages/PrimePage';
 import NewsPage from './pages/NewsPage';
 import ArticlePage from './pages/ArticlePage';
+import TradeConsultationPage from './pages/TradeConsultationPage';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/prime-business-solutions" element={<PrimePage />} />
         <Route path="/news/:slug" element={<ArticlePage />} />
         <Route path="/news" element={<NewsPage />} />
+        <Route path="/services/trade-consultation" element={<TradeConsultationPage />} />
       </Routes>
       <Footer />
       <ScrollToTop />

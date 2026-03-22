@@ -1,3 +1,5 @@
+import customSlideImg from '../assets/slider_img/custom-slide.jpg';
+
 export const servicesHero = {
   tag: 'What We Do',
   title: 'End-to-End Logistics\nSolutions for Every Need',
@@ -129,7 +131,7 @@ export const customsData = {
     tag: 'Customs & Consultancy',
     title: 'Navigating Sri Lanka Customs\nwith Confidence',
     subtitle: 'Expert consultancy that keeps your imports and exports moving — fully compliant, zero delays.',
-    image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=1600&q=80',
+    image: customSlideImg,
   },
   intro: {
     title: 'Your Sri Lanka Customs Specialist',

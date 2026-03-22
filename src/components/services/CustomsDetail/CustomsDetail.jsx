@@ -1,6 +1,7 @@
 import { customsData } from '../../../data/services'
 import styles from './CustomsDetail.module.css'
 
+
 function CustomsDetail() {
   return (
     <>

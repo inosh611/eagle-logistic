@@ -28,6 +28,7 @@ export const navItems = [
         label: "Specialized Logistics",
         href: "/services/specialized-logistics",
       },
+      { label: 'Trade Consultation', href: '/services/trade-consultation' },
       { label: "BDP Partnership", href: "/bdp-partnership" },
     ],
   },

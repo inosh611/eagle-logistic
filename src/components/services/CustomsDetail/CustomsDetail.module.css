@@ -1,7 +1,7 @@
 /* Intro */
 .intro {
   background: var(--bg-light);
-  padding: 80px 80px;
+  padding: 80px 10%;
 }
 
 .inner {
@@ -45,7 +45,7 @@
 /* Services */
 .services {
   background: #fff;
-  padding: 80px 80px;
+  padding: 80px 10%;
 }
 
 .servicesHeader {
