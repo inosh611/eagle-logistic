@@ -1,0 +1,305 @@
+/* ── Slider container ── */
+.slider {
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+  overflow: hidden;
+}
+
+/* ── Individual slide ── */
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+  pointer-events: none;
+}
+
+.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ── Background image ── */
+.bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.05);
+  transition: transform 7s ease;
+  filter: brightness(0.58);
+}
+
+.bgZoom {
+  transform: scale(1);
+}
+
+/* ── Dark gradient overlay ── */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(13, 15, 26, 0.72) 0%,
+    rgba(13, 15, 26, 0.3) 60%,
+    transparent 100%
+  );
+}
+
+/* ── Slide content (left side) ── */
+.content {
+  position: absolute;
+  bottom: 26%;
+  left: 15%;
+  max-width: 50%;
+  transform: translateY(30px);
+  opacity: 0;
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s,
+    opacity 0.8s ease 0.3s;
+}
+
+.contentVisible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ── Tag pill ── */
+.tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(8px);
+  border-radius: 50px;
+  padding: 6px 18px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+}
+
+/* ── Slide title ── */
+.title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 2px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* ── CTA button ── */
+.ctaWrap {
+  margin-top: 32px;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  padding: 13px 26px 13px 20px;
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.25s;
+}
+
+.cta:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.ctaCircle {
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.cta:hover .ctaCircle {
+  transform: rotate(45deg);
+}
+
+/* ── Description (right side) ── */
+.description {
+  position: absolute;
+  bottom: 120px;
+  right: 18%;
+  max-width: 280px;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+  transform: translateY(20px);
+  opacity: 0;
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.5s,
+    opacity 0.8s ease 0.5s;
+}
+
+.descVisible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ── Dots navigation ── */
+.dots {
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  padding: 14px 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition:
+    background 0.3s,
+    transform 0.3s;
+}
+
+.dotActive {
+  background: #fff;
+  transform: scale(1.25);
+}
+
+/* ── Prev / Next arrows ── */
+.arrow {
+  position: absolute;
+  bottom: 28px;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.arrow:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.arrowPrev {
+  left: 60px;
+}
+.arrowNext {
+  left: 114px;
+}
+
+/* ── Slide counter ── */
+.counter {
+  position: absolute;
+  bottom: 40px;
+  right: 80px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.5);
+  z-index: 20;
+  letter-spacing: 2px;
+}
+
+.counterCurrent {
+  color: #fff;
+  font-weight: 700;
+}
+
+/* ── Progress bar ── */
+.progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: var(--accent);
+  z-index: 20;
+  transition: width 0.05s linear;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .content {
+    left: 40px;
+  }
+  .description {
+    right: 50px;
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    left: 20px;
+    bottom: 80px;
+    max-width: 88vw;
+  }
+
+  .title {
+    font-size: clamp(1.8rem, 7vw, 3rem);
+  }
+
+  .description {
+    display: none;
+  }
+
+  .arrowPrev {
+    left: 20px;
+  }
+  .arrowNext {
+    left: 74px;
+  }
+
+  .counter {
+    right: 40px;
+    bottom: 30px;
+  }
+
+  .dots {
+    right: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.7rem;
+  }
+  .tag {
+    font-size: 0.62rem;
+    padding: 5px 14px;
+  }
+}

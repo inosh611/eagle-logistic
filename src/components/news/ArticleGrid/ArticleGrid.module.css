@@ -1,0 +1,233 @@
+.section {
+  background: var(--bg-light);
+  padding: 20px 80px 80px;
+}
+
+.header {
+  margin-bottom: 28px;
+}
+
+.label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.title {
+  font-family: "Barlow", sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 900;
+  color: var(--navy-mid);
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.filter {
+  background: #fff;
+  border: 1px solid rgba(13, 27, 62, 0.1);
+  border-radius: 50px;
+  padding: 7px 16px;
+  font-family: "Barlow", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+.filter:hover {
+  background: rgba(37, 99, 235, 0.06);
+  color: var(--accent);
+  border-color: rgba(37, 99, 235, 0.25);
+}
+.filterActive {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #fff !important;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 24px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  background: #fff;
+  border-radius: 16px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(13, 27, 62, 0.07);
+  transition:
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 48px rgba(13, 27, 62, 0.11);
+}
+
+/* Image */
+.cardImg {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.cardImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.card:hover .cardImg img {
+  transform: scale(1.06);
+}
+
+.cardTag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--accent-dark);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+
+/* Body */
+.cardBody {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.metaText {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.metaDot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  opacity: 0.4;
+}
+
+.cardTitle {
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--navy-mid);
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+
+.cardExcerpt {
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  flex: 1;
+  margin-bottom: 18px;
+}
+
+/* Footer */
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.authorAvatar {
+  width: 28px;
+  height: 28px;
+  background: var(--accent-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.authorName {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--navy-mid);
+}
+
+.readMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: gap 0.2s, color 0.2s;
+}
+.readMore:hover {
+  gap: 10px;
+  color: var(--accent);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 20px 24px 60px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

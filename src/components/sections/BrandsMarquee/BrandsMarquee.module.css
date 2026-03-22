@@ -1,0 +1,52 @@
+.wrapper {
+  background: var(--bg-light);
+  padding: 42px 0 36px;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid rgba(13,27,62,0.08);
+}
+
+.fadeLeft, .fadeRight {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 140px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.fadeLeft  { left: 0;  background: linear-gradient(to right, var(--bg-light), transparent); }
+.fadeRight { right: 0; background: linear-gradient(to left,  var(--bg-light), transparent); }
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 0 56px;
+  border-right: 1px solid rgba(13,27,62,0.12);
+  cursor: default;
+  transition: opacity 0.25s;
+}
+
+.item:hover { opacity: 0.55; }
+
+.name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .item { padding: 0 30px; }
+  .name { font-size: 1.2rem; }
+}

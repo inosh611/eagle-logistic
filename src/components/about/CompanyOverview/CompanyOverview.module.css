@@ -1,0 +1,155 @@
+.section {
+  background: var(--bg-light);
+  padding: 90px 80px;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+/* Left */
+.label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: 'Barlow', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 900;
+  color: var(--navy-mid);
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.highlight { color: var(--accent); }
+
+.desc {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 36px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--accent-dark);
+  border: none;
+  border-radius: 50px;
+  padding: 14px 20px 14px 28px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+.btnCircle {
+  width: 34px;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Right */
+.imgWrap {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 360px;
+  margin-bottom: 20px;
+}
+
+.imgWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.foundedBadge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: var(--accent-dark);
+  border-radius: 14px;
+  padding: 14px 20px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(29, 63, 170, 0.4);
+}
+
+.foundedYear {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+}
+
+.foundedLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Stats grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.statCard {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px 22px;
+  border: 1px solid rgba(13, 27, 62, 0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.statCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(13, 27, 62, 0.1);
+}
+
+.statValue {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--accent-dark);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.statLabel {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 1024px) {
+  .inner { gap: 40px; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 60px 24px; }
+  .inner { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,143 @@
+/* Intro */
+.intro {
+  background: var(--bg-light);
+  padding: 80px 80px 60px;
+}
+
+.introInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.introTitle {
+  font-family: 'Barlow', sans-serif;
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+  font-weight: 900;
+  color: var(--navy-mid);
+  line-height: 1.2;
+}
+
+.introDesc {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text-muted);
+  padding-top: 32px;
+}
+
+/* Stats bar */
+.statsBar {
+  background: var(--navy-mid);
+  display: flex;
+  justify-content: center;
+  gap: 0;
+}
+
+.statItem {
+  flex: 1;
+  max-width: 280px;
+  text-align: center;
+  padding: 40px 20px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+.statItem:last-child { border-right: none; }
+
+.statValue {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.statLabel {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+}
+
+/* Services grid */
+.services {
+  background: var(--bg-light);
+  padding: 80px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.servicesGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.serviceCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px 26px;
+  border: 1px solid rgba(13,27,62,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.serviceCard:hover {
+  transform: translateX(6px);
+  box-shadow: 0 8px 24px rgba(13,27,62,0.08);
+}
+
+.serviceNum {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+
+.serviceTitle {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--navy-mid);
+}
+
+.serviceDesc {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.serviceImg {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 480px;
+}
+.serviceImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .intro { padding: 60px 24px 40px; }
+  .introInner { grid-template-columns: 1fr; gap: 24px; }
+  .introDesc { padding-top: 0; }
+  .statsBar { flex-wrap: wrap; }
+  .statItem { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .services { grid-template-columns: 1fr; padding: 60px 24px; }
+  .serviceImg { height: 280px; }
+}

@@ -1,0 +1,101 @@
+.section {
+  background: var(--navy-mid);
+  padding: 90px 80px;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  margin-bottom: 14px;
+}
+
+.title {
+  font-family: 'Barlow', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.desc {
+  font-size: 0.92rem;
+  line-height: 1.85;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 36px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--accent);
+  border-radius: 50px;
+  padding: 13px 20px 13px 26px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn:hover { background: var(--accent-light); transform: translateY(-2px); }
+
+.btnCircle {
+  width: 32px; height: 32px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Benefits */
+.right { display: flex; flex-direction: column; gap: 0; }
+
+.benefitRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.benefitRow:first-child { padding-top: 0; }
+.benefitRow:last-child { border-bottom: none; padding-bottom: 0; }
+
+.benefitNum {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: rgba(37,99,235,0.35);
+  line-height: 1;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.benefitTitle {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.benefitDesc {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.5);
+}
+
+@media (max-width: 768px) {
+  .section { padding: 60px 24px; }
+  .inner { grid-template-columns: 1fr; gap: 48px; }
+}

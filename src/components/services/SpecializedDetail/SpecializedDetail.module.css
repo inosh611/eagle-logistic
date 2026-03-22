@@ -1,0 +1,121 @@
+.division {
+  background: var(--bg-light);
+  padding: 90px 80px;
+}
+
+.divisionAlt {
+  background: #fff;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.divisionAlt .inner {
+  direction: rtl;
+}
+.divisionAlt .inner > * {
+  direction: ltr;
+}
+
+.tag {
+  display: inline-block;
+  background: rgba(37,99,235,0.1);
+  border-radius: 50px;
+  padding: 5px 14px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: 'Barlow', sans-serif;
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+  font-weight: 900;
+  color: var(--navy-mid);
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.desc {
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+.features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--navy-mid);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  border-radius: 50px;
+  padding: 13px 20px 13px 26px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.15s;
+}
+.btn:hover { opacity: 0.88; transform: translateY(-2px); }
+
+.btnCircle {
+  width: 32px; height: 32px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.imgWrap {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 440px;
+  position: relative;
+}
+.imgWrap img { width: 100%; height: 100%; object-fit: cover; }
+
+.imgBadge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+}
+
+@media (max-width: 768px) {
+  .division { padding: 60px 24px; }
+  .inner { grid-template-columns: 1fr; direction: ltr; gap: 36px; }
+  .divisionAlt .inner { direction: ltr; }
+  .imgWrap { height: 300px; }
+}

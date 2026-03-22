@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Barlow+Condensed:wght@400;700;900&display=swap');
+ 
+:root {
+  --navy:         #0d0f1a;
+  --navy-deep:    #080f1e;
+  --navy-dark:    #0a1628;
+  --navy-mid:     #0d1b3e;
+  --accent:       #2563eb;
+  --accent-light: #3b82f6;
+  --accent-dark:  #1d3faa;
+  --bg-light:     #eef0f5;
+  --white:        #ffffff;
+  --gray:         #94a3b8;
+  --text-muted:   #6b7fa3;
+  --pill-bg:      rgba(255,255,255,0.08);
+  --pill-border:  rgba(255,255,255,0.14);
+}
