@@ -11,7 +11,7 @@ export const bdpOverview = {
   PSA BDP moves millions of shipments annually for the world's leading companies 
   in chemicals, retail, consumer goods and technology. As their trusted Sri Lanka 
   partner, Eagle Logistic gives local businesses direct access to this powerful 
-  global network — with the personal service of a local team.`,
+  global network - with the personal service of a local team.`,
   stats: [
     { id: 1, value: '240+', label: 'Cities Worldwide' },
     { id: 2, value: '6',    label: 'Continents Covered' },
@@ -116,3 +116,50 @@ export const partnershipBenefits = [
     description: 'A named local team who knows your business, backed by a global network of specialists.',
   },
 ]
+
+export const bdpInSriLanka = {
+  title: 'BDP in Sri Lanka',
+  description: `Eagle Logistics Colombo is the exclusive agent and partner for all BDP
+  Operations and Services in Sri Lanka. A privately owned company headquartered
+  in Philadelphia, BDP International is founded on a vision to be the best global
+  logistics provider in the world. Today, you'll find BDP People over-achieving
+  wherever you are — between Beijing and Brussels, Singapore and São Paulo,
+  Toronto and Tokyo, Milan and Manchester, and in more than 240 cities across the globe.`,
+  images: [
+    'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80',
+    'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80',
+    'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80',
+    'https://images.unsplash.com/photo-1542744094-3a31f272c490?w=600&q=80',
+    'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
+    'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&q=80',
+  ],
+}
+
+export const bdpInternational = {
+  title: 'BDP International',
+  website: 'www.bdpinternational.com',
+  intro: `BDP International is trusted by some of the World's Largest Brands in
+  executing their most demanding Air, Ocean, and Ground Logistics and
+  Transportation operations. For over 5 decades, BDP has deployed the best
+  transportation and logistics services across the globe — together with their
+  Team and Technology they help businesses to get things moving fast.`,
+  approach: `The BDP Approach is simple. BDP gets to know their customers by listening
+  and learning their needs. Then they deliver solutions that improve effectiveness
+  and minimize their spend.`,
+  fastTrack: [
+    'Optimizing Costs of Transportation',
+    'Improving Cycle Time',
+    'Entering Fast Growing Markets',
+    'Analyzing, Designing and Managing Logistics Processes',
+    'Planning for Rapid Economic Growth',
+  ],
+  closing: 'Developing Infrastructure to meet volatile business demands.',
+  images: [
+    'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=80',
+    'https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=800&q=80',
+    'https://images.unsplash.com/photo-1569629743817-70d8db6c323b?w=600&q=80',
+    'https://images.unsplash.com/photo-1583967395832-30b42e56aafb?w=600&q=80',
+    'https://images.unsplash.com/photo-1548858806-e6a6a15e95e3?w=800&q=80',
+    'https://images.unsplash.com/photo-1530822847156-5df684ec5933?w=600&q=80',
+  ],
+}

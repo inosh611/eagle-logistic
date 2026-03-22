@@ -1,0 +1,214 @@
+.section {
+  background: #fff;
+  padding: 90px 10%;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Left */
+.label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.title {
+  font-family: 'Barlow', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 900;
+  color: var(--navy-mid);
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.divider {
+  width: 48px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin: 18px 0 20px;
+}
+
+.desc {
+  font-size: 0.92rem;
+  line-height: 1.85;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+/* Exclusive badge */
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(37,99,235,0.06);
+  border: 1.5px solid rgba(37,99,235,0.18);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 28px;
+}
+
+.badgeIcon {
+  width: 40px; height: 40px;
+  background: rgba(37,99,235,0.1);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.badgeTitle {
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--navy-mid);
+  margin-bottom: 2px;
+}
+
+.badgeSub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent-dark);
+  border-radius: 50px;
+  padding: 12px 20px 12px 24px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn:hover { background: var(--accent); transform: translateY(-2px); }
+
+/* Right */
+.right { display: flex; flex-direction: column; gap: 10px; }
+
+/* BDP Logo bar */
+.logoBar {
+  background: var(--bg-light);
+  border-radius: 14px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(13,27,62,0.07);
+  margin-bottom: 2px;
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoIcon {
+  width: 48px; height: 48px;
+  background: rgba(37,99,235,0.08);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.logoTextWrap { display: flex; flex-direction: column; }
+
+.logoText {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #2563eb;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+.logoSub {
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #2563eb;
+  opacity: 0.7;
+}
+
+.logoCities {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: rgba(37,99,235,0.08);
+  border-radius: 50px;
+  padding: 4px 14px;
+}
+
+/* Mosaic grid */
+.mosaic { display: flex; flex-direction: column; gap: 8px; }
+
+.mosaicGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  gap: 8px;
+  height: 260px;
+}
+
+.mosaicRow2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  height: 130px;
+}
+
+.cell {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.cellTall { height: 100%; }
+
+.cellCol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cellCol .cell { flex: 1; }
+
+.cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.cell:hover img { transform: scale(1.06); }
+
+.cellOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(13,27,62,0.18) 0%, transparent 60%);
+  transition: background 0.3s;
+}
+.cell:hover .cellOverlay {
+  background: linear-gradient(135deg, rgba(37,99,235,0.15) 0%, transparent 60%);
+}
+
+@media (max-width: 1024px) {
+  .inner { gap: 48px; }
+  .mosaicGrid { height: 200px; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 60px 24px; }
+  .inner { grid-template-columns: 1fr; }
+  .mosaicGrid { grid-template-columns: 1fr 1fr; height: 180px; }
+  .mosaicGrid .cellTall:last-of-type { display: none; }
+}

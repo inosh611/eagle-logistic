@@ -8,7 +8,7 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       {/* Subscribe strip */}
-      <div className={styles.subscribe}>
+      {/* <div className={styles.subscribe}>
         <h2 className={styles.subscribeTitle}>
           Subscribe for latest
           <br />
@@ -39,7 +39,7 @@ function Footer() {
             </svg>
           </button>
         </div>
-      </div>
+      </div> */}
 
       {/* Main */}
       <div className={styles.main}>
