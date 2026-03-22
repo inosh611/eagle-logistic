@@ -1,20 +1,17 @@
 import { consultationServices } from '../../../data/tradeConsultation'
 import styles from './ConsultationServices.module.css'
+import customImg from "../../../assets/custom.png"
 
 function RegulatoryIcon() {
   return (
-    <svg viewBox="0 0 80 80" fill="none" width={80} height={80}>
-      {/* Shield */}
-      <path d="M40 8 L65 20 L65 45 C65 58 54 68 40 72 C26 68 15 58 15 45 L15 20 Z"
-        fill="rgba(37,99,235,0.1)" stroke="#2563eb" strokeWidth="2"/>
-      {/* Checkmark */}
-      <path d="M28 40 L36 48 L52 32"
-        stroke="#2563eb" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-      {/* Stars/dots around */}
-      <circle cx="12" cy="15" r="2.5" fill="#2563eb" opacity="0.3"/>
-      <circle cx="68" cy="15" r="2.5" fill="#2563eb" opacity="0.3"/>
-      <circle cx="8" cy="50" r="2" fill="#2563eb" opacity="0.2"/>
-    </svg>
+     <img
+      src={customImg}
+      alt="Sri Lanka Customs"
+      width={100}
+      height={100}
+      style={{ objectFit: 'contain' }}
+      loading="lazy"
+    />
   )
 }
 
