@@ -18,6 +18,9 @@ import NewsPage from './pages/NewsPage';
 import ArticlePage from './pages/ArticlePage';
 import TradeConsultationPage from './pages/TradeConsultationPage';
 import SupplyChainCommunityPage from './pages/SupplyChainCommunityPage';
+import PressPage from './pages/PressPage';
+import MagazinePage from './pages/MagazinePage'
+
 
 function App() {
   return (
@@ -39,6 +42,8 @@ function App() {
         <Route path="/news" element={<NewsPage />} />
         <Route path="/services/trade-consultation" element={<TradeConsultationPage />} />
         <Route path="/supply-chain-community" element={<SupplyChainCommunityPage />} />
+        <Route path="/press" element={<PressPage />} />
+        <Route path="/magazine" element={<MagazinePage />} />
       </Routes>
       <Footer />
       <ScrollToTop />

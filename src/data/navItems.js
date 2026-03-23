@@ -40,8 +40,10 @@ export const navItems = [
       { label: "News & Insights", href: "/news" },
       { label: "Magazine Archive", href: "/news#magazine" },
       { label: "Press Releases", href: "/news#press" },
+       { label: 'Press & Media',         href: '/press' },
       // { label: "Supply Chain Community", href: "/news#community" },
       { label: 'Supply Chain Community', href: '/supply-chain-community' },
+      { label: 'E-Visible Magazine', href: '/magazine' },
     ],
   },
   {
