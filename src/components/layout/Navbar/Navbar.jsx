@@ -36,7 +36,7 @@ function Navbar() {
         <div className={styles.right}>
           {/* Socials */}
           <div className={styles.socials}>
-            <a href="#" aria-label="Facebook">
+            <a href="https://web.facebook.com/EagleLogisticsCMB" aria-label="Facebook" target="_blank">
               <svg
                 viewBox="0 0 24 24"
                 fill="currentColor"

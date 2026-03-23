@@ -19,7 +19,7 @@ function ServicesCarousel() {
           </h2>
         </div>
         <div className={styles.arrows}>
-          {/* <button className={styles.arrow} onClick={goPrev} aria-label="Previous">
+          <button className={styles.arrow} onClick={goPrev} aria-label="Previous">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
               strokeLinecap="round" strokeLinejoin="round" width={18} height={18}>
               <polyline points="15 18 9 12 15 6" />
@@ -30,7 +30,7 @@ function ServicesCarousel() {
               strokeLinecap="round" strokeLinejoin="round" width={18} height={18}>
               <polyline points="9 18 15 12 9 6" />
             </svg>
-          </button> */}
+          </button>
         </div>
       </div>
 

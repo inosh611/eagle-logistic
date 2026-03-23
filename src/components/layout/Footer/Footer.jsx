@@ -112,7 +112,7 @@ function Footer() {
 
       {/* Copyright */}
       <div className={styles.copyright}>
-        Copyright &copy; 2026 <span className={styles.brand}>Shipex Demo1</span>
+        Copyright &copy; 2026 <span className={styles.brand}>GoGradz</span>
         , All Rights Reserved.
       </div>
     </footer>

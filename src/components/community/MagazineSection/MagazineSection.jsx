@@ -52,7 +52,7 @@ function MagazineSection() {
           </div>
 
           <div className={styles.actions}>
-            <a href="/news#magazine" className={styles.btnPrimary}>
+            <a href="/magazine" className={styles.btnPrimary}>
               Read Latest Issue
               <span className={styles.btnCircle}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="white"
@@ -63,7 +63,7 @@ function MagazineSection() {
                 </svg>
               </span>
             </a>
-            <a href="/news#magazine" className={styles.btnOutline}>
+            <a href="/magazine" className={styles.btnOutline}>
               View All Issues
             </a>
           </div>

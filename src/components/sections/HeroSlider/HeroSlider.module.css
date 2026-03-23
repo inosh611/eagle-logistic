@@ -265,7 +265,7 @@
 @media (max-width: 768px) {
   .content {
     left: 20px;
-    bottom: 80px;
+    bottom: 36%;
     max-width: 88vw;
   }
 
