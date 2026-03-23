@@ -1,6 +1,6 @@
 .section {
   background: var(--bg-light);
-  padding: 90px 80px;
+  padding: 90px 10% 90px;
 }
 
 .inner {
