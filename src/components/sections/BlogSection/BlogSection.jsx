@@ -11,7 +11,7 @@ function BlogCard({ post }) {
       <div className={styles.cardImg}>
         <img src={post.image} alt={post.title} />
       </div>
-      <div className={styles.cardBody}>
+      {/* <div className={styles.cardBody}>
         <div className={styles.cardTitle}>{post.title}</div>
         <a href={post.href} className={styles.readMore}>
           Read More
@@ -21,7 +21,7 @@ function BlogCard({ post }) {
             <polyline points="12 5 19 12 12 19" />
           </svg>
         </a>
-      </div>
+      </div> */}
     </div>
   )
 }
@@ -34,7 +34,7 @@ function BlogSection() {
           <div className={styles.label}>Our Blog</div>
           <h2 className={styles.title}>Updated Blogs &amp; News</h2>
         </div>
-        <a href="#" className={styles.viewAllBtn}>
+        {/* <a href="#" className={styles.viewAllBtn}>
           View All Post
           <span className={styles.viewAllCircle}>
             <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5"
@@ -43,7 +43,7 @@ function BlogSection() {
               <polyline points="7 7 17 7 17 17" />
             </svg>
           </span>
-        </a>
+        </a> */}
       </div>
 
       <div className={styles.grid}>

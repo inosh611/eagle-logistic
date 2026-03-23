@@ -10,7 +10,7 @@ import TeamSection       from '../components/sections/TeamSection/TeamSection'
 import TestimonialSection from '../components/sections/TestimonialSection/TestimonialSection'
 import SupplyChainBanner from '../components/sections/SupplyChainBanner/SupplyChainBanner'
 import VideoCallSection  from '../components/sections/VideoCallSection/VideoCallSection'
-import BlogSection       from '../components/sections/BlogSection/BlogSection'
+import IndustryVerticals from '../components/sections/IndustryVerticals/IndustryVerticals'
 
 function HomePage() {
   return (
@@ -20,6 +20,7 @@ function HomePage() {
       <ExperienceSection />
       <DeliveringSection />
       <ServicesCarousel />
+      <IndustryVerticals />
       <HowItWorks />
       <FeaturesStrip />
       <EstimateSection />
@@ -27,7 +28,6 @@ function HomePage() {
       <TestimonialSection />
       <SupplyChainBanner />
       <VideoCallSection />
-      <BlogSection />
     </main>
   )
 }

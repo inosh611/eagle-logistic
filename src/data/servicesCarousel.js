@@ -1,3 +1,5 @@
+import tradeImg from "../assets/esantials-trade.jpg";
+
 export const services = [
   {
     id: 1,
@@ -27,7 +29,7 @@ export const services = [
     id: 4,
     title: 'Trade Consultation',
     description: 'Our Team has over 15 years of experience in Global Trade and optimized Logistics Services...',
-    image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=700&q=80',
+    image: tradeImg,
     icon: 'consultation',
     featured: false,
   },

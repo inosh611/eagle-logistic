@@ -10,7 +10,7 @@ export const testimonials = [
   {
     id: 2,
     rating: 5,
-    quote: '"Shipex completely transformed our supply chain operations. Deliveries are always on time and the real-time tracking gives us total peace of mind. Highly recommended for any growing business."',
+    quote: '"Eagle Logistic completely transformed our supply chain operations. Deliveries are always on time and the real-time tracking gives us total peace of mind. Highly recommended for any growing business."',
     name: 'Sarah Williams',
     role: 'Operations Director',
     avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80',
