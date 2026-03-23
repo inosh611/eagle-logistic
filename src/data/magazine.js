@@ -1,3 +1,5 @@
+import latestImg from "../assets/e-visible/latest.jpg"
+import danushika from "../assets/team/danushika.png"
 export const magazineHero = {
   tag: 'E-Visible Magazine',
   title: 'Sri Lanka\'s First &\nOnly Supply Chain Magazine',
@@ -21,7 +23,7 @@ export const magazineCoordinator = {
   role: 'Magazine Coordinator',
   phone: '+94 71 485 7729',
   email: 'magazine@eaglelogistic.lk',
-  image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80',
+  image: danushika,
   note: 'For Article and Advertisement Inquiries',
 }
 
@@ -33,7 +35,7 @@ export const magazineIssues = [
     coverPerson: 'Prabath Gunasekera',
     coverPersonTitle: 'Chairman, Collins Color / Clad by Even Security Syndicate / IronRide Fitness',
     theme: 'Events',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
+    image: latestImg,
     isLatest: true,
     anyflipUrl: 'https://anyflip.com/YOUR_ID/YOUR_BOOK/embed',
   },
