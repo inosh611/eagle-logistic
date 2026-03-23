@@ -17,6 +17,7 @@ import PrimePage from './pages/PrimePage';
 import NewsPage from './pages/NewsPage';
 import ArticlePage from './pages/ArticlePage';
 import TradeConsultationPage from './pages/TradeConsultationPage';
+import SupplyChainCommunityPage from './pages/SupplyChainCommunityPage';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route path="/news/:slug" element={<ArticlePage />} />
         <Route path="/news" element={<NewsPage />} />
         <Route path="/services/trade-consultation" element={<TradeConsultationPage />} />
+        <Route path="/supply-chain-community" element={<SupplyChainCommunityPage />} />
       </Routes>
       <Footer />
       <ScrollToTop />

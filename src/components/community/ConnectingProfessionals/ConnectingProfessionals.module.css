@@ -1,0 +1,242 @@
+.section {
+  background: #fff;
+  padding: 90px 10% 90px;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+/* Left */
+.label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.title {
+  font-family: 'Barlow', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 900;
+  color: var(--navy-mid);
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.divider {
+  width: 48px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin: 18px 0 20px;
+}
+
+.para {
+  font-size: 0.92rem;
+  line-height: 1.85;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+/* Network highlight */
+.networkHighlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(37,99,235,0.06);
+  border: 1.5px solid rgba(37,99,235,0.18);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin: 4px 0 16px;
+  color: var(--accent);
+}
+
+.networkHighlight p {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--navy-mid);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.closingText {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+  padding-left: 12px;
+  border-left: 3px solid rgba(37,99,235,0.25);
+}
+
+/* Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--accent-dark);
+  border-radius: 50px;
+  padding: 13px 18px 13px 26px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn:hover { background: var(--accent); transform: translateY(-2px); }
+
+.btnCircle {
+  width: 30px; height: 30px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Right mosaic */
+.mosaicWrap { position: relative; }
+
+.mosaic {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 8px;
+  height: 460px;
+}
+
+.mosaicCol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.mosaicCol .cell { flex: 1; }
+
+.mosaicColFeatured {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.mosaicColFeatured .cell:first-child { flex: 1.5; }
+.mosaicColFeatured .cell:last-child { flex: 1; }
+
+.cellTall { flex: 1.4 !important; }
+
+.cell {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  min-height: 0;
+}
+
+.cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s ease;
+}
+.cell:hover img { transform: scale(1.06); }
+
+.cellOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(13,27,62,0.3) 100%
+  );
+  transition: background 0.3s;
+}
+.cell:hover .cellOverlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(37,99,235,0.1) 0%,
+    rgba(13,27,62,0.4) 100%
+  );
+}
+
+/* Badge on mosaic */
+.mosaicBadge {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  background: var(--accent-dark);
+  border-radius: 16px;
+  padding: 18px 22px;
+  text-align: center;
+  border: 3px solid #fff;
+  box-shadow: 0 12px 36px rgba(29,63,170,0.4);
+  z-index: 2;
+}
+
+.mosaicBadgeVal {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.mosaicBadgeLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Bottom banner
+.bottomBanner {
+  background: var(--navy-mid);
+  margin: 0 -80px;
+  padding: 28px 80px;
+}
+
+.bottomBannerInner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bottomBannerIcon {
+  width: 44px; height: 44px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.bottomBannerText {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+  flex: 1;
+}
+
+.bottomBannerText strong { color: #fff; font-weight: 800; } */
+
+@media (max-width: 1024px) {
+  .inner { gap: 48px; }
+  .mosaic { height: 380px; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 60px 24px 0; }
+  .inner { grid-template-columns: 1fr; gap: 40px; margin-bottom: 40px; }
+  .mosaic { grid-template-columns: 1fr 1fr; height: 300px; }
+  .mosaicCol:last-child { display: none; }
+  .mosaicBadge { right: -8px; bottom: -8px; }
+  .bottomBanner { margin: 0 -24px; padding: 28px 24px; }
+  .bottomBannerText { text-align: left; font-size: 0.85rem; }
+}
