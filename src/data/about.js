@@ -18,18 +18,8 @@ import indika from '../assets/team/indika.png';
 export const companyOverview = {
   founded: "2005",
   tagline: "Moving the World. Powering Sri Lanka's Trade.",
-  description1: `Eagle Logistics Colombo was founded in 2005.
-   The company was formed in Partnership between its founder 
-   and CEO Asanga Weerackody and CL Synergy Pvt. Limited. With 
-   just a 5-member team, Eagle Logistics focused its attention 
-   solely on the freight forwarding industry and established itself
-    as one of the best service businesses in the country.`,
-    description2: `Eagle Logistics Colombo was founded in 2005.
-   The company was formed in Partnership between its founder 
-   and CEO Asanga Weerackody and CL Synergy Pvt. Limited. With 
-   just a 5-member team, Eagle Logistics focused its attention 
-   solely on the freight forwarding industry and established itself
-    as one of the best service businesses in the country.`,
+  description1: `Eagle Logistics Colombo was founded in 2005. The company was formed in Partnership between its founder and CEO Asanga Weerackody and CL Synergy Pvt. Limited. With just a 5-member team, Eagle Logistics focused its attention solely on the freight forwarding industry and established itself as one of the best service businesses in the country.`,
+  description2: `Now making 2 decades of growth, the Eagle Group has diversified into Leisure and IT and operates with a team of over 300 members across its portfolio of companies. While Logistics remains a part of its core operations, the company has also focused on providing end-to-end innovative Supply Chain solutions which help solve complex problems across the industry.`,
   stats: [
     { id: 1, value: "20+", label: "Years of Experience" },
     { id: 2, value: "240+", label: "Cities Worldwide" },

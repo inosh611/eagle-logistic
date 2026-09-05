@@ -24,7 +24,7 @@ function ContactHero() {
               </svg>
             </span>
           </a>
-          <a href="tel:+9411XXXXXXX" className={styles.btnOutline}>
+          <a href="tel:0112577892" className={styles.btnOutline}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
               strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
               width={16} height={16}>

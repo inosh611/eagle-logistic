@@ -70,14 +70,14 @@ function Footer() {
         {/* Say Hello */}
         <div>
           <div className={styles.colTitle}>Say Hello</div>
-          <a href="tel:+18001234567" className={styles.contactLink}>
-            +1-800123-456-789
+          <a href="tel:0112577892" className={styles.contactLink}>
+            011 2577892
           </a>
           <a
-            href="mailto:no-reply@pbminfotech.com"
+            href="mailto:info@eaglelogisticscmb.com"
             className={styles.contactLink}
           >
-            no-reply@pbminfotech.com
+            info@eaglelogisticscmb.com
           </a>
         </div>
 
@@ -112,7 +112,7 @@ function Footer() {
 
       {/* Copyright */}
       <div className={styles.copyright}>
-        Copyright &copy; 2026 <span className={styles.brand}>GoGradz</span>
+        Copyright &copy; {new Date().getFullYear()} <span className={styles.brand}>Eagle Logistics</span>
         , All Rights Reserved.
       </div>
     </footer>
@@ -127,10 +127,10 @@ function SocialIcon({ name }) {
           <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
         </svg>
       );
-    case "twitter":
+    case "youtube":
       return (
         <svg viewBox="0 0 24 24" fill="currentColor" width={18} height={18}>
-          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231z" />
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
         </svg>
       );
     case "linkedin":
@@ -155,6 +155,12 @@ function SocialIcon({ name }) {
           <rect x="2" y="2" width="20" height="20" rx="5" />
           <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+        </svg>
+      );
+    case "tiktok":
+      return (
+        <svg viewBox="0 0 24 24" fill="currentColor" width={18} height={18}>
+          <path d="M12.525 2.003c1.31 0 2.446.002 3.557.014a.784.784 0 0 1 .773.743c.092 1.488.674 2.868 1.676 3.905A6.866 6.866 0 0 0 22.5 8.272a.776.776 0 0 1 .775.776v3.235a.778.778 0 0 1-.775.777 9.873 9.873 0 0 1-4.025-.867 9.94 9.94 0 0 1-1.95-1.173v7.353c0 4.14-3.36 7.5-7.5 7.5a7.5 7.5 0 0 1-7.5-7.5c0-4.14 3.36-7.5 7.5-7.5.42 0 .83.035 1.23.102a.78.78 0 0 1 .65.766v3.313a.78.78 0 0 1-.65.768 4.453 4.453 0 0 0-1.23-.174 4.5 4.5 0 1 0 4.5 4.5V2.78a.78.78 0 0 1 .775-.777z"/>
         </svg>
       );
     default:

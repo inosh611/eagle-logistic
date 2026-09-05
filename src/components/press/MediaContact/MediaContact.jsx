@@ -19,7 +19,7 @@ function MediaContact() {
 
           {/* Contact details */}
           <div className={styles.contacts}>
-            <a href="mailto:info@eaglelogistic.lk" className={styles.contactItem}>
+            <a href="mailto:info@eaglelogisticscmb.com" className={styles.contactItem}>
               <div className={styles.contactIcon}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
@@ -30,11 +30,11 @@ function MediaContact() {
               </div>
               <div>
                 <div className={styles.contactLabel}>Email</div>
-                <div className={styles.contactValue}>info@eaglelogistic.lk</div>
+                <div className={styles.contactValue}>info@eaglelogisticscmb.com</div>
               </div>
             </a>
 
-            <a href="tel:+94XXXXXXXXX" className={styles.contactItem}>
+            <a href="tel:0112577892" className={styles.contactItem}>
               <div className={styles.contactIcon}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
@@ -44,7 +44,7 @@ function MediaContact() {
               </div>
               <div>
                 <div className={styles.contactLabel}>Phone</div>
-                <div className={styles.contactValue}>+94 11 XXX XXXX</div>
+                <div className={styles.contactValue}>011 2577892</div>
               </div>
             </a>
           </div>
@@ -86,28 +86,22 @@ function MediaContact() {
             <div className={styles.socialTitle}>Follow Our Story</div>
             <div className={styles.socialLinks}>
               {[
-                { name: 'LinkedIn', icon: 'linkedin', href: '#' },
-                { name: 'Facebook', icon: 'facebook', href: '#' },
-                { name: 'Twitter / X', icon: 'twitter', href: '#' },
-                { name: 'Instagram', icon: 'instagram', href: '#' },
+                { name: 'Facebook', icon: 'facebook', href: 'https://facebook.com/EagleLogisticsCMB' },
+                { name: 'YouTube', icon: 'youtube', href: 'https://youtube.com/@EagleLogisticsCMB' },
+                { name: 'Instagram', icon: 'instagram', href: 'https://instagram.com/eagle_logistics_cmb' },
+                { name: 'LinkedIn', icon: 'linkedin', href: 'https://linkedin.com/company/eagle-logistics-cmb' },
+                { name: 'TikTok', icon: 'tiktok', href: 'https://tiktok.com/@eaglelogistics' },
               ].map(s => (
-                <a key={s.name} href={s.href} className={styles.socialLink}>
+                <a key={s.name} href={s.href} target="_blank" rel="noreferrer" className={styles.socialLink}>
                   <div className={styles.socialIcon}>
-                    {s.icon === 'linkedin' && (
-                      <svg viewBox="0 0 24 24" fill="currentColor" width={16} height={16}>
-                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/>
-                        <rect x="2" y="9" width="4" height="12"/>
-                        <circle cx="4" cy="4" r="2"/>
-                      </svg>
-                    )}
                     {s.icon === 'facebook' && (
                       <svg viewBox="0 0 24 24" fill="currentColor" width={16} height={16}>
                         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                       </svg>
                     )}
-                    {s.icon === 'twitter' && (
+                    {s.icon === 'youtube' && (
                       <svg viewBox="0 0 24 24" fill="currentColor" width={16} height={16}>
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                       </svg>
                     )}
                     {s.icon === 'instagram' && (
@@ -117,6 +111,18 @@ function MediaContact() {
                         <rect x="2" y="2" width="20" height="20" rx="5"/>
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
                         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                      </svg>
+                    )}
+                    {s.icon === 'linkedin' && (
+                      <svg viewBox="0 0 24 24" fill="currentColor" width={16} height={16}>
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/>
+                        <rect x="2" y="9" width="4" height="12"/>
+                        <circle cx="4" cy="4" r="2"/>
+                      </svg>
+                    )}
+                    {s.icon === 'tiktok' && (
+                      <svg viewBox="0 0 24 24" fill="currentColor" width={16} height={16}>
+                        <path d="M12.525 2.003c1.31 0 2.446.002 3.557.014a.784.784 0 0 1 .773.743c.092 1.488.674 2.868 1.676 3.905A6.866 6.866 0 0 0 22.5 8.272a.776.776 0 0 1 .775.776v3.235a.778.778 0 0 1-.775.777 9.873 9.873 0 0 1-4.025-.867 9.94 9.94 0 0 1-1.95-1.173v7.353c0 4.14-3.36 7.5-7.5 7.5a7.5 7.5 0 0 1-7.5-7.5c0-4.14 3.36-7.5 7.5-7.5.42 0 .83.035 1.23.102a.78.78 0 0 1 .65.766v3.313a.78.78 0 0 1-.65.768 4.453 4.453 0 0 0-1.23-.174 4.5 4.5 0 1 0 4.5 4.5V2.78a.78.78 0 0 1 .775-.777z"/>
                       </svg>
                     )}
                   </div>

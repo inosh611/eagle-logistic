@@ -112,7 +112,7 @@ export const internshipProgram = {
   contact: {
     name: 'Sayuri Pramudika',
     role: 'Head of Human Resources',
-    email: 'careers@eaglelogistic.lk',
-    phone: '+94 11 XXX XXXX',
+    email: 'info@eaglelogisticscmb.com',
+    phone: '011 2577892',
   },
 }

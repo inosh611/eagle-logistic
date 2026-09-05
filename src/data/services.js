@@ -31,7 +31,7 @@ export const servicesList = [
     id: 3,
     slug: 'customs-consultancy',
     icon: 'clipboard',
-    title: 'Customs & Consultancy',
+    title: 'Customs House Brokerage',
     subtitle: 'Sri Lanka Customs Experts',
     shortDesc: 'Expert guidance through Sri Lanka Customs regulations, tariff classifications and import/export compliance.',
     color: '#854f0b',
@@ -128,18 +128,14 @@ export const bpoData = {
 
 export const customsData = {
   hero: {
-    tag: 'Customs & Consultancy',
+    tag: 'Customs House Brokerage',
     title: 'Navigating Sri Lanka Customs\nwith Confidence',
     subtitle: 'Expert consultancy that keeps your imports and exports moving — fully compliant, zero delays.',
     image: customSlideImg,
   },
   intro: {
     title: 'Your Sri Lanka Customs Specialist',
-    description: `Sri Lanka Customs regulations are complex and constantly evolving.
-    Eagle Logistic's Customs & Consultancy team has over two decades of hands-on
-    experience navigating import/export rules, tariff classifications, duty calculations
-    and customs audits. We ensure your business stays compliant, avoids penalties
-    and keeps cargo moving without costly delays.`,
+    description: `The Team at Eagle Logistics is adept at handling a wide range of commodities across various industries and navigating the sensitive rules and regulations of Sri Lanka Customs. For those who wish to understand the complexities of customs operations from an academic or research perspective, professional academic support services can provide valuable guidance in exploring such specialized topics. We offer a full range of services that cover every aspect of the Import Clearance Process.`,
   },
   services: [
     { id: 1, title: 'Import & Export Clearance', desc: 'Full customs clearance service for all types of goods entering or leaving Sri Lanka.' },

@@ -4,7 +4,37 @@ import styles from './LatestEdition.module.css'
 
 function LatestEdition() {
   const latest = magazineIssues.find(m => m.isLatest)
-  const [flipLoaded, setFlipLoaded] = useState(false)
+  const [flipLoaded, setFlipLoaded] = useState(true)
+
+  if (!latest && magazineIssues.length === 0) {
+    return (
+      <section className={styles.section} id="latest">
+        <div className={styles.flipbookSection}>
+          <div className={styles.flipbookHeader}>
+            <div className={styles.label}>Latest Magazine</div>
+            <h2 className={styles.flipbookTitle}>E-Visible Supply Chain Magazine</h2>
+            <p className={styles.flipbookSub}>
+              Stay tuned for our upcoming magazine editions featuring exclusive interviews, industry insights, and supply chain innovations.
+            </p>
+          </div>
+          <div className={styles.emptyCard}>
+            <div className={styles.emptyIcon}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)"
+                strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+                width={48} height={48}>
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </div>
+            <h3 className={styles.emptyTitle}>No Issues Available Yet</h3>
+            <p className={styles.emptyDesc}>
+              Currently, there are no magazine issues published. Please check back soon for the latest edition!
+            </p>
+          </div>
+        </div>
+      </section>
+    )
+  }
 
   return (
     <section className={styles.section} id="latest">

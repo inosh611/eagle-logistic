@@ -15,8 +15,9 @@ export const serviceLinks = [
 ]
 
 export const socialLinks = [
-  { id: 1, name: 'facebook',  href: 'https://web.facebook.com/EagleLogisticsCMB' },
-  { id: 2, name: 'twitter',   href: '#' },
-  { id: 3, name: 'linkedin',  href: '#' },
-  { id: 4, name: 'instagram', href: '#' },
+  { id: 1, name: 'facebook',  href: 'https://facebook.com/EagleLogisticsCMB' },
+  { id: 2, name: 'youtube',   href: 'https://youtube.com/@EagleLogisticsCMB' },
+  { id: 3, name: 'instagram', href: 'https://instagram.com/eagle_logistics_cmb' },
+  { id: 4, name: 'linkedin',  href: 'https://linkedin.com/company/eagle-logistics-cmb' },
+  { id: 5, name: 'tiktok',    href: 'https://tiktok.com/@eaglelogistics' },
 ]

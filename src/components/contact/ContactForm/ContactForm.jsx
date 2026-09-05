@@ -80,7 +80,7 @@ function ContactForm() {
 
           {/* Quick contact */}
           <div className={styles.quickContact}>
-            <a href="tel:+9411XXXXXXX" className={styles.quickItem}>
+            <a href="tel:0112577892" className={styles.quickItem}>
               <div className={styles.quickIcon}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
@@ -90,11 +90,11 @@ function ContactForm() {
               </div>
               <div>
                 <div className={styles.quickLabel}>Call us directly</div>
-                <div className={styles.quickValue}>+94 11 XXX XXXX</div>
+                <div className={styles.quickValue}>011 2577892</div>
               </div>
             </a>
 
-            <a href="mailto:info@eaglelogistic.lk" className={styles.quickItem}>
+            <a href="mailto:info@eaglelogisticscmb.com" className={styles.quickItem}>
               <div className={styles.quickIcon}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
@@ -105,7 +105,7 @@ function ContactForm() {
               </div>
               <div>
                 <div className={styles.quickLabel}>Email us</div>
-                <div className={styles.quickValue}>info@eaglelogistic.lk</div>
+                <div className={styles.quickValue}>info@eaglelogisticscmb.com</div>
               </div>
             </a>
 
