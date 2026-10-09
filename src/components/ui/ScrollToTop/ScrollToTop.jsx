@@ -1,8 +1,25 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { useScrollTop } from '../../../hooks/useScrollTop'
 import styles from './ScrollToTop.module.css'
 
 function ScrollToTop() {
   const { visible, scrollToTop } = useScrollTop()
+  const { pathname, hash } = useLocation()
+
+  useEffect(() => {
+    if (hash) {
+      const id = hash.replace('#', '')
+      const el = document.getElementById(id)
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: 'smooth' })
+        }, 150)
+        return
+      }
+    }
+    window.scrollTo(0, 0)
+  }, [pathname, hash])
 
   if (!visible) return null
 

@@ -23,7 +23,7 @@ function PersonCard({ person }) {
 
 function LeadershipTeam() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="our-people">
       <div className={styles.header}>
         <div className={styles.label}>Our People</div>
         <h2 className={styles.title}>Meet the Leadership Team</h2>

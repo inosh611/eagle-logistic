@@ -21,6 +21,9 @@ function HeroSlider() {
           <div className={`${styles.content} ${i === current ? styles.contentVisible : ''}`}>
             <span className={styles.tag}>{slide.tag}</span>
             <h1 className={styles.title} style={{ whiteSpace: 'pre-line' }}>{slide.title}</h1>
+            <p className={styles.description}>
+              {slide.description}
+            </p>
             <div className={styles.ctaWrap}>
               <a href="#" className={styles.cta}>
                 <span className={styles.ctaCircle}>
@@ -34,11 +37,6 @@ function HeroSlider() {
               </a>
             </div>
           </div>
-
-          {/* Description */}
-          <p className={`${styles.description} ${i === current ? styles.descVisible : ''}`}>
-            {slide.description}
-          </p>
         </div>
       ))}
 

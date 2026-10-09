@@ -1,5 +1,5 @@
 import latestImg from "../assets/e-visible/latest.jpg"
-import danushika from "../assets/team/danushika.png"
+import hashintha from "../assets/team/hashintha.png"
 
 export const magazineHero = {
   tag: 'E-Visible Magazine',
@@ -15,16 +15,16 @@ export const magazineAbout = {
     { value: '13+', label: 'Editions Published' },
     { value: '500+', label: 'Subscribers' },
     { value: '100+', label: 'Expert Articles' },
-    { value: '10+', label: 'Years Running' },
+    { value: '5+', label: 'Years Running' },
   ],
 }
 
 export const magazineCoordinator = {
-  name: 'Danushika Molligoda',
+  name: 'Hashintha Kaluwila',
   role: 'Magazine Coordinator',
-  phone: '011 2577892',
-  email: 'info@eaglelogisticscmb.com',
-  image: danushika,
+  phone: '071 4557729',
+  email: 'mgtt1@eaglelogisticscmb.com',
+  image: hashintha,
   note: 'For Article and Advertisement Inquiries',
 }
 

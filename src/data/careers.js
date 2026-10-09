@@ -110,9 +110,9 @@ export const internshipProgram = {
   duration: '3 - 6 Months',
   departments: ['Freight Forwarding', 'Logistics BPO', 'Customs & Consultancy', 'IT & Technology', 'Sales & Marketing'],
   contact: {
-    name: 'Sayuri Pramudika',
-    role: 'Head of Human Resources',
-    email: 'info@eaglelogisticscmb.com',
+    name: 'Majintha Rathnayake',
+    role: 'Human Resources',
+    email: 'hrm@eaglelogisticscmb.com',
     phone: '011 2577892',
   },
 }

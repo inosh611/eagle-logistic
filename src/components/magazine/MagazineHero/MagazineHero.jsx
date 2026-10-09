@@ -40,8 +40,8 @@ function MagazineHero() {
         <div className={styles.floatMagName}>e-VISIBLE</div>
         <div className={styles.floatTagline}>Supply Chain Magazine</div>
         <div className={styles.floatDivider} />
-        <div className={styles.floatEdition}>19th Edition</div>
-        <div className={styles.floatYear}>Est. 2014</div>
+        <div className={styles.floatEdition}>13th Edition</div>
+        <div className={styles.floatYear}>Est. 2019</div>
       </div>
     </section>
   )

@@ -7,10 +7,16 @@ function VideoCallSection() {
       <div className={styles.inner}>
 
         {/* Left video */}
-        <div className={styles.video}>
+        <a
+          href="https://youtube.com/@EagleLogisticsCMB"
+          target="_blank"
+          rel="noreferrer"
+          className={styles.video}
+          aria-label="Eagle Logistics Corporate Video"
+        >
           <img
             src={videoThumbnail}
-            alt="Logistics team"
+            alt="Eagle Logistics Corporate Video"
             className={styles.videoImg}
             loading='lazy'
           />
@@ -20,7 +26,7 @@ function VideoCallSection() {
               <polygon points="5 3 19 12 5 21 5 3" />
             </svg>
           </div>
-        </div>
+        </a>
 
         {/* Right call card */}
         <div className={styles.callCard}>
@@ -44,7 +50,7 @@ function VideoCallSection() {
             </div>
             <div>
               <div className={styles.phoneLabel}>Call for free</div>
-              <div className={styles.phoneNumber}>+92 (9800) 6869</div>
+              <a href="tel:+94112577892" className={styles.phoneNumber}>+94 11 2577892</a>
             </div>
           </div>
         </div>

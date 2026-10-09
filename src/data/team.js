@@ -14,7 +14,6 @@ export const teamMembers = [
   { id: 3, name: 'Tamara Weerackody',  role: 'Director',      image: roshan },
   { id: 4, name: 'Arun Sharma',    role: 'Director',     image: tamara },
   { id: 5, name: 'Rangana Perera', role: 'Head of Freight',       image: rangana },
-  { id: 6, name: 'Nuwan Wickramanayaka',     role: 'Transport Chief',    image: nuwan },
   { id: 7, name: 'Amila Munaweera',    role: 'Head of Finance',    image: amila },
   { id: 8, name: 'Prabudda Ranaweera',   role: 'Marketing Lead',      image: prabudda },
 ]

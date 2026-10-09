@@ -95,7 +95,7 @@ function ApplicationForm() {
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
               </svg>
-              info@eaglelogisticscmb.com
+              hrm@eaglelogisticscmb.com
             </div>
             <div className={styles.contactBoxItem}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -107,7 +107,7 @@ function ApplicationForm() {
             </div>
             <div className={styles.contactNote}>
               For internship enquiries, contact<br />
-              <strong>Sayuri Pramudika</strong> directly at the email above.
+              <strong>Majintha Rathnayake</strong> directly at the email above.
             </div>
           </div>
         </div>
